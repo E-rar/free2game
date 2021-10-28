@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+/* Variables */
+$bgcolor: #040F14;
+$buttonRed:#FF4654;
+$inputBlue: #375470;
+$cardText:#AFC7DF;
+$textColor:#FFFFFF;
+$transparent:rgba(255, 255, 255, 0);
+$cardColor:#375470;
+$borderBottom:rgba(255, 255, 255, 0.2);
+$darkColor:#102130;
+
+.number{ //general style von dem kreis mit der Nummber drin 
+    width:58px;
+    height:58px;
+    border:2px solid $buttonRed;
+    background-color:$darkColor;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-family:'Roboto';
+    font-size:24px;
+}
+button{
+    border:none;
+}
+.buttonRed{
+color:$textColor;
+background-color: $buttonRed;
+font-size: 1.1em;
+padding: 12px 24px;
+border-radius: 10px;
+margin:0% 0 2% 5%;
+&:hover{
+    cursor:pointer;
+}
+
+}
+.Top1Card{
+    width:34.2vw;
+    height:97vh;
+    background: $transparent url('../img/Top1Card.png') no-repeat;
+    background-size: cover;
+    border-radius:24px;
+    background-color: $darkColor;
+    .contentBig{
+        margin-top: 95%;
+        margin-left: 3.5vw;
+    }
+    h1{
+        font-size:3em ;
+        margin:0% 0 5% 5%;
+        color:#fff;
+        position:sticky;
+        z-index:2;
+    }
+    .number{
+        
+        margin-left: 90%;
+    }
+}
+.buttonRed{
+    margin-bottom: 7%;
+}
+
+
+.TopCardItem{
+    background-color: $darkColor;
+    width: 50vw;
+    height: 30vh;
+    border-radius: 24px;
+    margin-right: 2em;
+    display:grid;
+    grid-template-columns: 55% 45%;
+        .thumbnail1{
+            overflow: hidden ;
+            border-radius:12px;
+            height: 100%;
+            background: $transparent url('../img/thumbnail1.png') no-repeat;
+            background-attachment: cover;
+            background-position: left;
+            background-size: 100%;
+        }
+
+    .content{
+        
+       
+        h3{
+            padding:5% 4%;
+            margin-left:2%;
+        }
+        .buttonContainer{
+            padding:3%;
+
+        }
+    }
+}
+
+
+
+
+// ==================top Pc Games Fabi=============
+.topPc{
+    display: flex;
+    justify-content: space-around;
+    margin-left: -1%;
+    .threeTopPc{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+    }
+}
+
+// h3 Top 4 Games for PC in September 2021 in Home.js
+.top-games{
+    h3{
+        margin-bottom: 2%;
+    }
+}
+
+
+

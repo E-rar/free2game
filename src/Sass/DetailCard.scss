@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body{
+    background-color: #040F14;
+    font-family:'Oswald', sans-serif ;
+    color: #fff;
+}
+p, td{
+    font-family: 'Titillium Web', sans-serif;
+}
+.item{
+    padding-top: 8vh;
+    padding-left: 7vw;
+    .gameheadImage img{
+        width: 90vw;
+        height: 60vh;
+        border-radius: 15px;
+        object-fit:cover;
+    }
+    .about{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        margin-left: 5vw;
+        .aboutDetails{
+            .gameheadTitle{
+                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 7%;
+                margin-bottom: 5%;
+            }
+            .aboutimage img{
+                width: 30vw;
+                height: 35vh;
+                border-radius: 15px;
+                object-fit:cover;
+                }
+            .platform1{
+                color: #fff;
+                margin-top: 3%;
+            }
+            .genre1{
+                width: 94px;
+                height: 28px;
+                border: 1px solid #FF4654;
+                border-radius: 15px;
+                text-align: center;
+                margin-top: 2%;
+                margin-bottom: 5%;
+
+            }
+            .buttonPlay{
+                color: #fff;
+                background-color: #FF4654;
+                font-size: 18px;
+                padding: 12px 24px;
+                border-radius: 10px;
+            }
+        }
+        .abouttext{
+            padding-top: 20vh;
+            width: 40vw;
+            height: 50%;
+            h2{
+                margin-bottom: 20px;
+            }
+            
+        }
+    }
+    .twoscreens{
+        display: flex;
+        margin-top: 15%;
+        margin-left: 5vw;
+        .screenone img{
+            width: 40vw;
+            height: 40vh;
+            background-color: white;
+            border-radius: 24px;
+        }
+        .screentwo img{
+            margin-left: 2vw;
+            width: 40vw;
+            height: 40vh;
+            background-color: white;
+            border-radius: 24px;
+        }
+    } 
+    .info{
+        display: flex;
+        padding-bottom: 15%;
+        margin-top: 10%;
+        .additional{
+            margin-left: 9%;
+            h3{
+                display: inline-block;
+                margin-top: 12px;
+                margin-right: 50px;
+            }
+            p{
+                width: 90%;
+            }
+            .info1{
+                display: flex;
+                p{
+                    margin-left: 5vw;
+                    margin-top: 3%;
+                }
+            }
+            .info2{
+                display: flex;
+                p{
+                    margin-left: 5vw;
+                    margin-top: 3%;
+                }
+            }
+            .info3{
+                display:flex;
+                p{
+                    margin-left: 5vw;
+                    margin-top: 3%;
+                }
+            }
+        }
+        .system{
+            table{
+                width: 80%;
+                th{
+                    text-align: left;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 428px){
+    .item{
+        padding-left: 12vw;
+        .gameheadImage img{
+            width: 80vw;
+            height: 50vh;
+        }
+        .about{
+            grid-template-columns: repeat(1, 1fr);
+            .aboutDetails{
+                .gameheadTitle{
+                    font-size: 2.5rem;
+                }
+                .aboutimage img{
+                    width: 70vw;
+                }
+                .genre1{
+                    margin-bottom: 10%;
+                }
+            .abouttext{
+                padding-top: 5vh;
+                width: 75%;
+            }
+            }
+        }
+        .twoscreens{
+            flex-direction: column;
+            .screenone img{
+                width: 70vw;
+                height: 35vh;
+            }
+            .screentwo img{
+                margin-top: 15px;
+                width: 70vw;
+                height: 35vh;
+            }
+        }
+        .info{
+            flex-direction: column;
+            h3{
+                font-size: 1rem;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+        .system{
+            margin-top: 25px;
+            table{
+                width: 70%;
+            }
+        }
+    }
+}

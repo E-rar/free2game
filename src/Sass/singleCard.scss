@@ -1,0 +1,66 @@
+// Alle Farben
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+/* Variables */
+$bgcolor: #040F14;
+$buttonRed:#FF4654;
+$inputBlue: #375470;
+$cardText:#AFC7DF;
+$textColor:#FFFFFF;
+$cardColor: #102130;
+$borderBottom: rgba(255,255,255,0.2);
+$pTextColor:#AFC7DF;
+
+// ==========================SINGLE-CARD===============================
+
+.singleCard{
+        display:grid;
+        grid-template-rows: 160px 44px 96px 51px 36px;
+        overflow: hidden;
+        width: 18.8vw;
+        height: 70vh;
+        background-color: $cardColor;
+        border-radius: 24px;
+        row-gap: 5.5vh;
+        .cardImg{
+                background-color: $cardColor;
+                img{
+                        width: 100%;
+                        border-radius: 24px;
+                }
+        }
+        .boxH3{
+                background-color: $cardColor;
+                width: 213px;
+                margin: 0 auto;
+                h3{
+                        color:$textColor;
+                        background-color: $cardColor;
+                        font-size:2em;
+                }
+        }
+        .boxP{
+                background-color: $cardColor;
+                width: 213px;
+                margin: 0 auto;
+                font-family:Titillium Web;
+                color:$pTextColor;
+                font-size: 1.2em; 
+                p{
+                        color:$pTextColor;
+                        background-color: $cardColor;       
+                }
+        }
+        .buttonContainer{
+                background-color: $cardColor;
+                border-bottom: 2px solid $borderBottom;
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: -10px;
+               
+        }
+        
+}
+
+// Schrift text card: Font Titillum Web, Font-weight: lighter?
+// import SingleCard from './components/SingleCard';

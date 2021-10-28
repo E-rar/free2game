@@ -1,0 +1,20 @@
+$bgcolor: #040F14;
+$buttonRed:#FF4654;
+$inputBlue: #375470;
+$cardText:#AFC7DF;
+$textColor:#FFFFFF;
+$transparent:rgba(255, 255, 255, 0);
+$cardColor:#375470;
+$borderBottom:rgba(255, 255, 255, 0.2);
+$darkColor:#102130;
+
+
+.buttonRed{
+    color:$textColor;
+    background-color: $buttonRed;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    margin:5%;
+    
+    }

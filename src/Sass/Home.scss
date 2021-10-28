@@ -1,0 +1,13 @@
+/*==================================Recently Added============================*/
+.RecentGrid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap:4%;
+    // width:90%;
+    margin:2% auto;
+
+}
+.showMoreContainer{
+    margin:5rem 0% 3% 86%;
+    display:block;
+}

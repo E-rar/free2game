@@ -1,0 +1,54 @@
+// Alle Farben
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+/* Variables */
+$bgcolor: #040F14;
+$buttonRed:#FF4654;
+$inputBlue: #375470;
+$cardText:#AFC7DF;
+$textColor:#FFFFFF;
+$cardColor: #102130;
+$borderBottom: rgba(255,255,255,0.2);
+
+// ==========================SINGLE-CARD-SMALL===============================
+
+.singleCard1{
+    display:grid;
+    grid-template-rows: 18vh 7em 4em 5em;
+    overflow: hidden;
+    width: 18.8vw;
+    height: 50vh;
+    background-color: $cardColor;
+    border-radius: 24px;
+    // row-gap: 35px;
+    .cardImg{
+            background-color: $cardColor;
+            img{
+                    width: 100%;
+                    height: 160px;//war vorher auskommentiert, Zusammenhang mit props.thumbmail
+                    border-radius: 24px;
+            }
+        }
+        .buttonContainer1{
+                background-color: $cardColor;
+                border-bottom: 2px solid $borderBottom;
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: -10px;
+               
+        }
+       
+}
+.boxH31{
+        background-color: $cardColor;
+        width: 75%;
+        margin: 0 auto;
+        h3{
+                color:$textColor;
+                background-color: $cardColor;
+                font-size:2em;
+        }
+        
+} 
+.smallCardGenre{
+        margin:15% 0 0 5%;
+}

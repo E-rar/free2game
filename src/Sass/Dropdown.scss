@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+$bgcolor: #040F14;
+$buttonRed:#FF4654;
+$inputBlue: #375470;
+$cardText:#AFC7DF;
+$textColor:#FFFFFF;
+$transparent:rgba(255, 255, 255, 0);
+$cardColor:#375470;
+$borderBottom:rgba(255, 255, 255, 0.2);
+.collaps_grid{
+    display:grid;
+    grid-template-columns: repeat(4,20vw);
+    row-gap:1%;
+    column-gap: .35%;
+    margin:2% 0 0 7%;
+/*==============================SCROLLBAR==========================*/
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+    border-radius:10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #102130; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #102130; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #102130; 
+  }
+//   ========================================================================
+    
+}
+
+
+.Collapsible{
+    
+    transition:.5s;
+    font-size:1.2em;
+    min-width: 18.8vw!important;
+    .is-closed{
+        background: rgba(255, 255, 255, 0) url("../img/DropdownOpen.png") no-repeat ;
+        background-position: 90% 50%;   
+    }
+    .is-open{
+        background: rgba(255, 255, 255, 0) url("../img/DropdownClosed.png") no-repeat ;
+        background-position: 90% 50%;  
+    }
+    .Collapsible__trigger{
+        background-color: $buttonRed;
+        border-radius:12px;
+        cursor:pointer;
+        font-size:1.1em;
+        text-align:left;
+        text-rendering: auto;
+        display:inline-block;
+        width:18.8vw;
+        padding:12px 0 12px 12px ; 
+        z-index:4;
+        position:sticky;
+        
+        
+        
+    }
+    span{
+        padding:3% 5% 5% 5%;
+        font-size:1.1em;
+        display:inline-block;
+        margin-bottom:2.5%;
+    }
+
+    .listContainer{
+        
+        overflow:scroll;
+        overflow-x: hidden;
+        background-color:#102130;
+        max-width:18.8vw;
+        border-radius: 0 0 12px 12px ;
+        margin:-5% 0 0 0;
+        max-height:333px;
+        padding-bottom:0.5%;
+        padding-top:12px;
+        
+        div{ //Styling von den ListItems
+            background-color:$cardColor;
+            width:90%;
+            height:51px;
+            margin:4% auto;
+            border-radius:12px;
+            transition:1s;
+            &:hover{
+                background-color:#4a7297;
+                cursor:pointer;
+            }
+            input{ //die weiße quadratische checkbox
+                font-family:'Raleway';
+                font-size:20px;
+                width:15px;
+                height:15px;
+                border:3px solid #ffff;
+                border-radius:0px;
+                margin-left:5%;
+                
+              
+            }
+            p{
+                background-color:$transparent;
+                position:relative;
+                left:20%;
+                top:-40%;
+                width:50%;
+
+            }
+            
+        }
+    }
+}
+.AllGamesGrid{
+    display:grid;
+    grid-template-columns: repeat(4,20vw);
+    row-gap:0.075%;
+    column-gap: .35%;
+    margin:2% 0 0 7%;
+
+}
+/*================================CHECKBOX STYLING===============================*/
+.listContainer{
+    input[type="checkbox"]{
+        overflow:hidden ;
+        -webkit-appearance: initial;
+        appearance: initial;
+        background: $cardColor;
+        width: 2em;
+        height: 2em;
+        border: solid 1px #fff;
+        position: relative;
+    }
+    input[type="checkbox"]:checked {
+        background: $cardColor;
+    }
+    input[type="checkbox"]:checked:after {
+        /* Heres your symbol replacement */
+        content: "X";
+        color: #fff;
+        background:$cardColor;
+        /* The following positions my tick in the center, 
+         * but you could just overlay the entire box
+         * with a full after element with a background if you want to */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        /*
+         * If you want to fully change the check appearance, use the following:
+         * content: " ";
+         * width: 100%;
+         * height: 100%;
+         * background: blue;
+         * top: 0;
+         * left: 0;
+         */
+    }
+}
+
+.Tags{
+    margin: 2% 7% 1% ;
+    span{
+        padding:4px 3px 4px 3px;
+        display:inline-block;
+        position:relative;
+        top:0;
+    }
+    div{
+        
+        border:1px solid #FF4654;
+        padding:0% 0.5%;
+        display:inline-block;
+        border-radius:12px;
+        margin:0 .7% 0 0;
+        input[type="checkbox"]{
+            display:inline-block;
+            overflow:hidden ;
+            -webkit-appearance: initial;
+            appearance: initial;
+            background:$transparent;
+            width: 1em;
+            height: 1em;
+            position: relative;
+            cursor:pointer;
+        }
+        input[type="checkbox"]:checked {
+            background:$transparent;
+        }
+        input[type="checkbox"]:checked:after {
+            /* Heres your symbol replacement */
+            content: "X";
+            color: #fff;
+            font-size:1.3em;
+            background:$transparent;
+            /* The following positions my tick in the center, 
+             * but you could just overlay the entire box
+             * with a full after element with a background if you want to */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            /*
+             * If you want to fully change the check appearance, use the following:
+             * content: " ";
+             * width: 100%;
+             * height: 100%;
+             * background: blue;
+             * top: 0;
+             * left: 0;
+             */
+        }
+    
+    }
+  
+}
+
+
+

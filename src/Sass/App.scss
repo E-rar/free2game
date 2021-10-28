@@ -1,0 +1,228 @@
+// Alle Farben
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+/* Variables */
+$bgcolor: #040F14;
+$buttonRed:#FF4654;
+$inputBlue: #375470;
+$cardText:#AFC7DF;
+$textColor:#FFFFFF;
+$transparent:rgba(255, 255, 255, 0);
+$cardColor:#375470;
+$borderBottom:rgba(255, 255, 255, 0.2);
+
+/*Hardreset und general style*/
+*{ 
+    margin:0;
+    padding:0;
+    color:$textColor;
+    
+    font-family:'Oswald';
+}
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FF4654; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    width: 30vw;
+}
+
+.margin-left-top{
+    // margin:10% 0 0 2.5%;
+    margin:2% 0 0 7%;
+}
+.transparent{
+    position:fixed;
+    background:rgba(255, 255, 255, 0);
+    
+}
+.flex{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.red{
+    background:$buttonRed;
+}
+
+input:focus {
+    outline:none;
+}
+a,Link{
+    text-decoration: none;
+}
+/*==========================================Navbar=========================================*/
+
+nav{
+    width:91.3vw;
+    padding:0.7% 3% 0.5% 6%;
+    input{
+        border-radius:12px;
+        color:$cardText;
+        padding:0.5% 3%;
+        border:none;
+        background: $inputBlue url("../img/Search.png") no-repeat right;
+        background-position: 92% 32%;
+    }
+    img{
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+/*==========================================Sidebar=========================================*/
+
+.sidebar{
+    
+    height:100vh;
+    margin-left:1%;
+    position:fixed;
+    z-index:5;
+    background:$bgcolor;
+    border-right:3px solid #fff; //die weiße Border rechts
+    // z-index:3;
+    display:flex; //Um die Buttons zu platzieren 
+    justify-content: flex-start;
+    align-items: center;
+    div{ //Die Größe und Aussehen der Buttons
+        width:50px;
+        height:50px;
+        border-radius:15px;       
+        }
+    .sideText{
+        font-family:'Source Sans Pro'; 
+        font-size: 20px;
+        background-color:rgba(255, 255, 255, 0); 
+        padding:11px 0% 0 60px;    
+    }
+    .button_container{
+        height:400px; //die Höhe des Divs der die Nav-Buttons beinhaltet
+        div{
+            margin:45px 0%; //der Abstand zwischen den Buttons
+        }
+    }
+    .hamburger{
+        background: rgba(255, 255, 255, 0) url("../img/Burger.png") no-repeat center;
+        position:absolute;
+        top:0.5%;
+        &:hover{
+            cursor:pointer;
+        }
+    }
+    .closeButton{
+            background: rgba(255, 255, 255, 0) url("../img/CloseButton.png") no-repeat center;
+            position:absolute;
+            top:0.5%;
+            left:10.5vw;
+            &:hover{
+            cursor:pointer;
+            
+    }
+    }
+    .homeButton{
+        background: $transparent url("../img/Home.png") no-repeat left;
+        background-position: 50% 50%;
+        
+    }
+    .allButton{
+        background: rgba(255, 255, 255, 0) url("../img/AllGames.png") no-repeat left;
+        background-position: 50% 50%;
+    }
+    .addedButton{
+        background: rgba(255, 255, 255, 0) url("../img/Recently_Added.png") no-repeat left;
+        background-position: 50% 50%;
+    }
+
+}
+
+/*=========================================Style Home======================================*/
+.Home{
+    background-color:$bgcolor;
+    padding:3.5% 0 0% 5%;
+    .homeHero{
+        background:  url("../img/HomeHero.png") no-repeat top/cover;
+        height: 70vh;
+        .pageTitle{
+            background:rgba(255, 255, 255, 0);
+            font-size:3.5em;
+            padding:23% 0 5% 5%;
+        } 
+    }
+    section{
+        padding-left:5%;
+        margin:7% 0% 3% 0%;
+
+        h3{
+            font-size:2em;
+        }
+    }
+}
+
+/*============================================Recently ADDED===================================*/
+
+.Recently{
+    background-color:$bgcolor;
+    padding:3.5% 2% 0% 5%;
+    .addedHero{
+        background: #fff  url('../img/RecentlyHero.png') no-repeat top/cover;
+        height: 55vh;
+        border-radius:29px;
+        .pageTitle{
+            background:rgba(255, 255, 255, 0);
+            font-size:3.5em;
+            padding:23% 0 5% 5%;
+        } 
+    }
+    section{
+        padding-left:5%;
+        margin:7% 0% 3% 0%;
+
+        h3{
+            font-size:2em;
+        }
+    }
+}
+
+/*==========================================ALL GAMES===========================================*/
+.AllGames{
+    padding:3.5% 2% 0% 5%;
+    background-color:$bgcolor;
+    .allGamesHero{
+        background: #fff  url('../img/AllGamesHero.png') no-repeat top/cover;
+        height: 55vh;
+        border-radius:29px;
+        .pageTitle{
+            background:rgba(255, 255, 255, 0);
+            font-size:3.5em;
+            padding:23% 0 5% 5%;
+        } 
+    }
+    section{
+        padding-left:5%;
+        margin:7% 0% 3% 0%;
+
+        h3{
+            font-size:2em;
+        }
+    }
+}
